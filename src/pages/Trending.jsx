@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import "./Trending.css"
+
 import axios from "axios";
 import SingleContent from "../components/SingleContent/SingleContent";
 

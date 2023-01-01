@@ -1,4 +1,5 @@
 import React from "react";
+import { img_300, unavailable } from "../../config/config";
 
 import "./SingleContent.css";
 
@@ -10,10 +11,22 @@ const SingleContent = ({
   media_type,
   vote_average,
 }) => {
+  return (
+    <div className="media">
+      <img
+        className="poster"
+        src={poster ? `${img_300}/${poster}` : unavailable}
+        alt={title}
+      />
+      <strong className="title">{title}</strong>
 
-  return <div>
-    
-  </div>;
+      <div className="subTitle">
+        <span>{media_type === "tv" ? "TV Series" : "Movies"}</span>
+        <span>{date}</span>
+      </div>
+      
+    </div>
+  );
 };
 
 export default SingleContent;
